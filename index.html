@@ -1,0 +1,65 @@
+<!doctype html><html lang="ar" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>عدسة المستمع</title>
+<script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=d6NuzkMnz1ht4YgLh39GUosFYOAVvzCAptBaonV6Y3fAsc9UuU8aj1ygBlLTgYnBKFH-7HL_DOBVlq6VkYCGY3Q55CHVXMdPfsSqveYUJWMvGcWeiXWGE5qL96RbndIQa3pvzMR5jOs2pkN0m6g8CbGPeJAKzL01Xocq0n7Yrhjlps05-9t4jy7VYnJQC_8OYXQQiEJvk4ZRQdMgUrCgnxtc2bOF1OyT7hszIiPxbpDzbaMlCUw_6RhlKU6ucraQzFVKmcYEDrk_uhJKyOHpY-oT_YE5coaxd6_jjcDzlGaYUmxQcBBKCbASZmZeiOiB" charset="UTF-8"></script><style>
+:root{--ink:#17365d;--muted:#667085;--bg:#fffaf0;--teal:#22b8b5;--purple:#9b7be5;--line:#e7e9ee;--pink:#ff86aa;--blue:#5aaaf0;--green:#68c99a;--yellow:#ffd565;--peach:#ffb978}*{box-sizing:border-box}body{margin:0;font-family:Tahoma,Arial,sans-serif;background:
+radial-gradient(circle at 8% 5%,#dff8f5 0 7%,transparent 7.5%),
+radial-gradient(circle at 92% 4%,#fff0bd 0 6%,transparent 6.5%),
+linear-gradient(180deg,#fffaf0,#fffdf8);color:var(--ink)}.wrap{max-width:820px;margin:auto;padding:24px 16px 44px}.top{display:flex;justify-content:space-between;align-items:center}.pill,.tag{background:#fff;border:1px solid var(--line);border-radius:999px;padding:7px 12px}.progress{height:9px;background:#edf0f4;border-radius:99px;overflow:hidden;margin:18px 0 24px}.bar{height:100%;width:0;background:linear-gradient(90deg,#22b8b5,#58aaf0,#9b7be5);transition:.3s}.screen{display:none}.active{display:block}.hero,.center{text-align:center}.hero h1{font-size:34px}.hero p,.note{color:var(--muted);line-height:1.8}.card{background:#fff;border:1px solid var(--line);border-radius:24px;padding:22px;margin:14px 0;box-shadow:0 7px 18px rgba(23,54,93,.06)}.names,.choices{display:grid;gap:11px}.names{grid-template-columns:repeat(3,1fr)}button{font:inherit;cursor:pointer;border-radius:16px;padding:14px 16px;min-height:50px;color:var(--ink);font-weight:700}.primary{border:0;background:var(--teal);color:#fff}.name,.choice{background:#fff;border:2px solid #e4e7ec}.choice{text-align:right;line-height:1.7}.focus{font-size:19px;line-height:1.9}.tag{display:inline-block;margin:4px;font-size:13px}.feedback{display:none;margin-top:14px;padding:15px;border-radius:16px;line-height:1.8}.feedback.ok{display:block;background:#e7f8ef}.feedback.no{display:block;background:#fff1e7}.big{font-size:46px}.stage{font-size:13px;color:var(--purple);font-weight:800}.wait{background:#fff5d6}.brand{font-size:22px;font-weight:800}.summary-card{position:relative;overflow:hidden;border-width:2px}.summary-card:before{content:"";position:absolute;right:0;top:0;bottom:0;width:7px;background:var(--accent,var(--teal))}
+.summary-card h2{margin:0 0 10px;font-size:21px}.summary-card p{margin:0;line-height:1.9;font-size:17px}.focus-card{--accent:var(--blue);background:#f5faff}.entry-card{--accent:var(--green);background:#f4fcf8}.why-card{--accent:var(--yellow);background:#fffaf0}
+.badge-icon{display:inline-grid;place-items:center;width:42px;height:42px;border-radius:14px;margin-left:8px;background:#fff;border:1px solid var(--line);font-size:23px;vertical-align:middle}
+.success-head{background:linear-gradient(135deg,#f3fbff,#fbf7ff)}.wait{border:2px dashed #efbf3f!important}
+@media(max-width:650px){.names{grid-template-columns:1fr}.hero h1{font-size:28px}}
+</style></head><body><div class="wrap"><div class="top"><div class="brand">🎧 عدسة المستمع</div><div class="pill">كيف نصغي؟</div></div><div class="progress"><div class="bar" id="bar"></div></div>
+<section class="screen active" id="s1"><div class="hero"><div class="big">🎧</div><h1>الرسالة واحدة… والعدسات مختلفة</h1><p>اختر اسمك لبدء مهمتك في هذه الجولة.</p></div><div class="names"><button class="name" data-p="ibrahim">إبراهيم الشطيف</button><button class="name" data-p="turki">تركي العتيبي</button><button class="name" data-p="asmahan">أسمهان التيماني</button></div><p class="note center">«عدستك في هذه الجولة» تجربة تعلمية وليست تشخيصًا ثابتًا.</p></section>
+<section class="screen" id="s2"><div class="stage">1 • تعرّف إلى عدستك</div><div class="card center"><div class="big" id="icon"></div><h1 id="hello"></h1><h2 id="title"></h2><p class="focus" id="focus"></p><div id="chips"></div></div><div class="card"><b>مهمتك:</b> افهم ما الذي تبحث عنه هذه العدسة أثناء الإصغاء، واستعد لتفسير اختيارك لزملائك.</div><button class="primary" id="listen">✨ فهمت عدستي — انتقل للاستماع</button></section>
+<section class="screen" id="s3"><div class="stage">2 • أصغِ</div><div class="card center"><div class="big">🎧</div><h1>حان وقت الإصغاء</h1><p class="focus">استمع إلى <b>رسالة الميسّرة مرة واحدة</b> من خلال عدستك.</p><p class="note">لا يظهر نص الرسالة هنا عمدًا؛ المطلوب أن تُصغي، لا أن تقرأ.</p></div><button class="primary" id="heard">🎧 سمعت الرسالة — ابدأ التحدي</button></section>
+<section class="screen" id="s4"><div class="stage">3 • اختر سؤال عدستك</div><div class="card"><h2>أي سؤال يعكس عدستك أكثر؟</h2></div><div class="choices" id="qs"></div><div class="feedback" id="qfb"></div></section>
+<section class="screen" id="s5"><div class="stage">4 • فكّر كميسّر</div><div class="card center"><div class="big">🎯</div><h1>أحسنت… عرفت كيف تُصغي عدستك</h1><p class="focus">لو كنت الميسّر، <b>أي مدخل يساعدك على الوصول إلى مستمع بهذه العدسة؟</b></p></div><div class="choices" id="entries"></div><div class="feedback" id="efb"></div></section>
+<section class="screen" id="s6">
+<div class="stage">5 • بطاقة المشاركة</div>
+<div class="card center success-head">
+  <div class="big" id="finalIcon">🏁</div>
+  <h1 id="successTitle">أحسنت!</h1>
+  <p class="focus" id="sum"></p>
+</div>
+
+<div class="card summary-card focus-card">
+  <h2><span class="badge-icon">🎯</span>على ماذا تركز عدستي؟</h2>
+  <p id="finalFocus"></p>
+</div>
+
+<div class="card summary-card entry-card">
+  <h2><span class="badge-icon">🧭</span>ما المدخل الملائم لها؟</h2>
+  <p id="finalEntry"></p>
+</div>
+
+<div class="card summary-card why-card">
+  <h2><span class="badge-icon">💡</span>لماذا؟</h2>
+  <p id="finalWhy"></p>
+</div>
+
+<div class="card wait center">
+  <div style="font-size:30px;margin-bottom:6px">📣⏱️</div>
+  <b>عند رسالة الميسّرة «انطلقوا» لديك 15 ثانية لعرض بطاقتك.</b><br>
+  اعرض لزملائك: <b>تركيز العدسة ← المدخل الملائم ← لماذا.</b><br><br>
+  <b>⏳ لا تبدأ قبل رسالة الانطلاق.</b>
+</div>
+<button class="primary" id="restart">🔄 إعادة التجربة</button>
+</section>
+</div><script>
+const people={ibrahim:{name:"إبراهيم",key:"ana",icon:"🔍",title:"الإصغاء التحليلي",focus:"يركز على الحقائق، البيانات، التفاصيل، الدقة والأدلة.",chips:["الحقائق","الدليل","الدقة","المعيار"]},turki:{name:"تركي",key:"rel",icon:"👥",title:"الإصغاء الارتباطي",focus:"يركز على الأشخاص، العلاقات، التفاعل ومراعاة الآخرين.",chips:["الأشخاص","العلاقات","التفاعل","الأثر الإنساني"]},asmahan:{name:"أسمهان",key:"con",icon:"💡",title:"الإصغاء المفاهيمي",focus:"يركز على الصورة الكبرى، الأفكار، الإمكانات والاتجاهات المستقبلية.",chips:["الصورة الكبرى","الاحتمالات","الأفكار","المستقبل"]}};
+const Q=[["rel","A","كيف سيتفاعل المشاركون مع هذه الآلية؟ وما أثرها على مشاركتهم وعلاقاتهم؟","الإصغاء الارتباطي"],["ref","B","ماذا تعني هذه الآلية لي في عملي؟ وكيف يمكن أن أستفيد منها في جلساتي؟","الإصغاء التأملي"],["ana","C","كيف ستُقاس نتائج النشاط؟ وما الأدلة أو المعايير التي ستحدد فاعليته؟","الإصغاء التحليلي"],["con","D","ما الإمكانات التي قد تفتحها هذه الآلية لتطوير تجربة التعلم مستقبلًا؟","الإصغاء المفاهيمي"]];
+const E=[["rel","A","قصة قصيرة أو تفاعل إنساني يبرز أثر الموضوع على الأشخاص والعلاقات.","المدخل الإنساني والعلاقات يساعدان المستمع الارتباطي على التقاط المعنى."],["ref","B","سؤال تأملي يربط الموضوع بخبرة المشارك وفائدته الشخصية.","المستمع التأملي يبحث عن المعنى الشخصي وصلته باهتماماته وأهدافه."],["ana","C","دليل أو بيانات أو معيار واضح يدعم الفكرة ويبين دقتها.","المستمع التحليلي يركز على الحقائق والدقة والأدلة والمعايير."],["con","D","سؤال مفتوح عن الصورة الكبرى والاحتمالات والأفكار المستقبلية.","المستمع المفاهيمي يتجه إلى الصورة الكبرى والإمكانات والاحتمالات."]];
+let cur=null,correctQ=null,correctE=null;const screens=[...document.querySelectorAll(".screen")];function show(n){screens.forEach((s,i)=>s.classList.toggle("active",i===n-1));bar.style.width=((n-1)/5*100)+"%";scrollTo(0,0)}
+document.querySelectorAll(".name").forEach(b=>b.onclick=()=>{cur=people[b.dataset.p];icon.textContent=cur.icon;hello.textContent="مرحبًا "+cur.name;title.textContent=cur.title;focus.textContent=cur.focus;chips.innerHTML=cur.chips.map(x=>'<span class="tag">'+x+'</span>').join("");show(2)});
+listen.onclick=()=>show(3);heard.onclick=()=>{renderQ();show(4)};
+function renderQ(){qs.innerHTML="";Q.forEach(q=>{let b=document.createElement("button");b.className="choice";b.textContent=q[1]+" — "+q[2];b.onclick=()=>{if(q[0]===cur.key){correctQ=q;qfb.className="feedback ok";qfb.innerHTML="<b>✓ اختيار صحيح.</b> هذا السؤال يعكس ما تركز عليه "+cur.title+".";setTimeout(()=>{renderE();show(5)},800)}else{qfb.className="feedback no";qfb.innerHTML="<b>جرّب مرة أخرى.</b> هذا السؤال يعكس <b>"+q[3]+"</b> أكثر."}};qs.appendChild(b)})}
+function renderE(){entries.innerHTML="";E.forEach(e=>{let b=document.createElement("button");b.className="choice";b.textContent=e[1]+" — "+e[2];b.onclick=()=>{if(e[0]===cur.key){correctE=e;efb.className="feedback ok";efb.innerHTML="<b>✓ أحسنت.</b> "+e[3];setTimeout(()=>{
+successTitle.textContent="أحسنت يا "+cur.name+"!";
+finalIcon.textContent=cur.icon;
+sum.innerHTML="<b>"+cur.title+"</b> — بطاقة جاهزة للمشاركة";
+finalFocus.textContent=cur.focus;
+finalEntry.textContent=correctE[2];
+finalWhy.textContent=correctE[3];
+show(6)},650)}else{efb.className="feedback no";efb.innerHTML="<b>جرّب مرة أخرى.</b> ارجع إلى ما تركز عليه عدستك واختر المدخل الذي يستجيب لذلك التركيز."}};entries.appendChild(b)})}
+restart.onclick=()=>{cur=null;correctQ=null;correctE=null;qfb.className="feedback";efb.className="feedback";show(1)}
+</script></body></html>
